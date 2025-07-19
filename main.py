@@ -48,7 +48,7 @@ def parse_timestamp(ts):
 options = Options()
 options.add_argument('--log-level=3')       # Reduce browser logs
 #options.add_experimental_option('excludeSwitches', ['enable-logging'])  # Suppress DevTools log
-options.add_argument('--headless')  # No UI
+#options.add_argument('--headless')  # No UI
 options.add_argument('--disable-gpu')  # Optional on Windows
 options.add_argument('--window-size=1920,1080')  # Needed by some sites
 service = Service(executable_path='chromedriver.exe')  #hide logs
@@ -121,30 +121,63 @@ def get_news(driver:webdriver):
 
 def get_score(driver:webdriver):
     driver.get('https://www.bbc.com/sport/football/scores-fixtures/')
-    print("gg")
+    
     driver.implicitly_wait(10)
-    print('yoohoo')
+    
     time.sleep(3)
     def fetch_scores(day:WebElement):
         sections = day.find_elements(By.XPATH,'//div[@class="ssrcss-1ox7t1a-Container ea54ukl1"]')
-        print("hereeeeeeeeeeeeeee\n\n\n\n\n")
+        print("here")
+        print(day.text)
+        
+        titles = []
+        title_hrefs = []
+        club1_names = []
+        club2_names = []
+        timings = []
+        aggs = []
+        home_scores = []
+        away_scores = []
+        minutes = []
+        postponeds = []
         for section in sections:
-            title_section = section.find_element(By.XPATH,'./div')
-            title = title_section.find_element(By.XPATH,'.//a')
-            title_text = title.text
-            title_href = title.get_attribute('href')
-            print(title_text)
+            
+            try:
+                title_section = section.find_element(By.XPATH,'./div')
+            except:
+                title_section = None
+                
+            try:
+                title = title_section.find_element(By.XPATH,'.//h2')
+            except:
+                title = None
+                
+            
+            try:
+                title_href = title.find_element(By.XPATH,'./div/a').get_attribute('href')
+            except:
+                title_href = None
+            if title.text:
+                title_text = title.text
+            else:
+                title_text = None
+            
+            
 
             matches_section = section.find_element(By.XPATH,'./ul')
             matches = matches_section.find_elements(By.XPATH,'./li')
-            '''
+          
+            
             for match in matches:
+
                 match_data = match.find_element(By.XPATH,'.//div[@class="ssrcss-1bjtunb-GridContainer e1efi6g55"]')
                 club1 = match_data.find_element(By.XPATH,'./div[@class="ssrcss-bon2fo-WithInlineFallback-TeamHome e1efi6g53"]')
                 club1_name = club1.find_element(By.XPATH,'.//span[@class="ssrcss-1p14tic-DesktopValue emlpoi30"]')
 
                 club2 =  match_data.find_element(By.XPATH,'./div[@class="ssrcss-nvj22c-WithInlineFallback-TeamAway e1efi6g52"]')
                 club2_name = club2.find_element(By.XPATH,'.//span[@class="ssrcss-1p14tic-DesktopValue emlpoi30"]')
+
+                
                 
                 try:   #check if still in future
                     timing = match_data.find_element(By.XPATH,'./div[@class="ssrcss-y5s079-WithInlineFallback-Scores e1efi6g51"]/div/time')
@@ -167,13 +200,47 @@ def get_score(driver:webdriver):
                 try:
                     minute = match_details.find_element(By.XPATH,'.//div[@class="ssrcss-1v84ueh-StyledPeriod e307mhr0"]')
                 except Exception:
-                    pass
+                    minute = None
                 
                 try:
                     postponed = match_details.find_element(By.XPATH,'.//div[@class="ssrcss-msb9pu-StyledPeriod e307mhr0"]')
                 except:
-                    pass
-            '''
+                    postponed=None
+                
+
+
+
+                #append to the lists
+                titles.append(title) 
+                title_hrefs.append(title_href) 
+                club1_names.append(club1_name) 
+                club2_names.append(club2_name) 
+                timings.append(timing) 
+                aggs.append(agg) 
+                home_scores.append(score_home) 
+                away_scores.append(score_away) 
+                minutes.append(minute) 
+                postponeds.append(True if postponed else False) 
+                print('match done')
+
+            
+        df = pd.DataFrame({
+            "titles" : titles,
+            "title_hrefs" : title_hrefs,
+            "club1_names" : club1_names,
+            "club2_names" : club2_names,
+            "timings" : timings,
+            "aggs" : aggs,
+            "home_scores" : home_scores,
+            "away_scores" : away_scores,
+            "minutes" : minutes,
+            "postponeds" : postponeds,
+        })
+
+        df.to_excel(f'mathces_{day}.xlsx')
+            
+
+        
 
         
     today = driver.find_element(By.XPATH,'//div[@data-content="Today"]')
