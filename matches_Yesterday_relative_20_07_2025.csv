@@ -1,0 +1,57 @@
+titles,title_hrefs,club1_names,club2_names,timings,aggs,home_scores,away_scores,minutes,postponeds
+UEFA Women's Euro,https://www.bbc.com/sport/football/womens-european-championship/table,France,Germany,,,1,1,,True
+Scottish League Cup,https://www.bbc.com/sport/football/scottish-league-cup/table,Cove Rangers,Falkirk,,,0,0,,True
+Scottish League Cup,https://www.bbc.com/sport/football/scottish-league-cup/table,Spartans,Brechin City,,,2,0,,True
+,,Edinburgh City,Stranraer,,,0,0,,True
+,,Queen of the South,Ross County,,,0,1,,True
+,,Alloa Athletic,Dundee,,,1,0,,True
+,,Montrose,Bonnyrigg Rose,,,4,1,,True
+,,Ayr United,Arbroath,,,4,0,,True
+,,St. Mirren,Annan Athletic,,,8,2,,True
+,,Dumbarton,Dunfermline Athletic,,,0,4,,True
+,,Stirling Albion,Hearts,,,0,4,,True
+,,Elgin City,East Kilbride,,,1,4,,True
+,,Inverness CT,St. Johnstone,,,0,1,,True
+,,Peterhead,Clyde,,,1,2,,True
+,,Stenhousemuir,Motherwell,,,0,1,,True
+,,Kelty Hearts,East Fife,,,0,1,,True
+,,Livingston,Brora Rangers,,,2,0,,True
+Welsh League Cup,,Gresford Athletic,Brickfield Rangers,,,3,0,,True
+Welsh League Cup,,Llantwit Major,Afan Lido,,,1,2,,True
+Welsh League Cup,,Y Rhyl 1879,Caersws,,,2,1,,True
+Welsh League Cup,,Ynyshir Albions,Cardiff Draconians,,,4,1,,True
+Welsh League Cup,,Ammanford,Cardiff City U21,,,0,0,,True
+Welsh League Cup,,Cambrian United,Treowen Stars,,,2,2,,True
+Welsh League Cup,,Carmarthen Town,Swansea City U21,,,1,4,,True
+Irish FAI Cup,,Cork City,Leicester Celtic,,,3,0,,True
+Irish FAI Cup,,Salthill Devon,St. Michael's,,,1,0,,True
+Irish FAI Cup,,Bangor Celtic,Cobh Ramblers,,,0,2,,True
+Irish FAI Cup,,Fairview Rangers,Shelbourne,,,0,4,,True
+Brazilian Serie A,https://www.bbc.com/sport/football/brazilian-league/table,Fortaleza,Bahia,,,1,1,,True
+Brazilian Serie A,https://www.bbc.com/sport/football/brazilian-league/table,Vasco da Gama,Grêmio,,,1,1,,True
+Brazilian Serie A,https://www.bbc.com/sport/football/brazilian-league/table,Mirassol,Santos,,,3,0,,True
+Chinese Super League,https://www.bbc.com/sport/football/chinese-super-league/table,Dalian Yingbo,Shandong Taishan,,,2,0,,True
+Chinese Super League,https://www.bbc.com/sport/football/chinese-super-league/table,Beijing Guoan,Shanghai Shenhua,,,1,3,,True
+Chinese Super League,https://www.bbc.com/sport/football/chinese-super-league/table,Shenzhen Peng City,Qingdao Hainiu,,,4,0,,True
+Chinese Super League,https://www.bbc.com/sport/football/chinese-super-league/table,Henan,Meizhou Hakka,,,1,1,,True
+Czech First League,https://www.bbc.com/sport/football/czech-first-league/table,Bohemians 1905,Baník Ostrava,,,1,0,,True
+Czech First League,https://www.bbc.com/sport/football/czech-first-league/table,Karviná,Dukla Praha,,,2,0,,True
+Czech First League,https://www.bbc.com/sport/football/czech-first-league/table,Teplice,Zlín,,,1,3,,True
+Czech First League,https://www.bbc.com/sport/football/czech-first-league/table,Jablonec,Sparta Prague,,,1,1,,True
+Finnish Veikkausliiga,https://www.bbc.com/sport/football/finnish-veikkausliiga/table,VPS,KuPS,,,1,1,,True
+Japanese J1 League,https://www.bbc.com/sport/football/japanese-j1-league/table,Shonan Bellmare,Cerezo Osaka,,,3,3,,True
+Japanese J1 League,https://www.bbc.com/sport/football/japanese-j1-league/table,Tokyo,Urawa Reds,,,3,2,,True
+Liga MX,https://www.bbc.com/sport/football/mexican-liga-mx/table,Necaxa,Querétaro,,,3,1,,True
+Liga MX,https://www.bbc.com/sport/football/mexican-liga-mx/table,Atlético San Luis,Monterrey,,,0,1,,True
+Liga MX,https://www.bbc.com/sport/football/mexican-liga-mx/table,Mazatlán,Puebla,,,2,1,,True
+Norwegian Eliteserien,https://www.bbc.com/sport/football/norwegian-tippeligaen/table,KFUM,Brann,,,2,0,,True
+Norwegian Eliteserien,https://www.bbc.com/sport/football/norwegian-tippeligaen/table,Molde,Strømsgodset,,,4,1,,True
+Norwegian Eliteserien,https://www.bbc.com/sport/football/norwegian-tippeligaen/table,Viking,Bodø / Glimt,,,2,4,,True
+Polish Ekstraklasa,https://www.bbc.com/sport/football/polish-ekstraklasa/table,Widzew Łódź,Zagłębie Lubin,,,1,0,,True
+Polish Ekstraklasa,https://www.bbc.com/sport/football/polish-ekstraklasa/table,Wisła Płock,Korona Kielce,,,2,0,,True
+Polish Ekstraklasa,https://www.bbc.com/sport/football/polish-ekstraklasa/table,GKS Katowice,Raków Częstochowa,,,0,1,,True
+Serbian Super Liga,https://www.bbc.com/sport/football/serbian-super-liga/table,Red Star Belgrade,Javor,,,4,0,,True
+Serbian Super Liga,https://www.bbc.com/sport/football/serbian-super-liga/table,Čukarički,Napredak,,,1,0,,True
+Swedish Allsvenskan,https://www.bbc.com/sport/football/swedish-allsvenskan/table,Djurgården,Elfsborg,,,1,0,,True
+Swedish Allsvenskan,https://www.bbc.com/sport/football/swedish-allsvenskan/table,Öster,Malmö FF,,,0,2,,True
+Swedish Allsvenskan,https://www.bbc.com/sport/football/swedish-allsvenskan/table,Degerfors,GAIS,,,0,3,,True
